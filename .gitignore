@@ -12,7 +12,11 @@ dist
 dist-ssr
 *.local
 package-lock.json
-package.json
+
+# Ocultar arquivos de configuração TypeScript e Vite
+vite.config.ts
+tsconfig.json
+tsconfig.node.json
 
 # Editor directories and files
 .vscode/*
