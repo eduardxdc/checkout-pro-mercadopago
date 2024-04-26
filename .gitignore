@@ -13,6 +13,8 @@ dist-ssr
 *.local
 package-lock.json
 package.json/
+package.json
+.eslintrc.cjs
 
 # Arquivos de configuração TypeScript e Vite
 vite.config.ts
