@@ -7,13 +7,14 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
+node_modules/
 dist
 dist-ssr
 *.local
 package-lock.json
+package.json/
 
-# Ocultar arquivos de configuração TypeScript e Vite
+# Arquivos de configuração TypeScript e Vite
 vite.config.ts
 tsconfig.json
 tsconfig.node.json
