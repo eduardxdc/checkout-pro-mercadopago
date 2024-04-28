@@ -4,6 +4,7 @@ import axios from "axios";
 
 const client = new MercadoPagoConfig({
   accessToken: MERCADOPAGO_API_KEY,
+  integrator_id: "dev_24c65fb163bf11ea96500242ac130004",
 });
 
 export const createOrder = (req, res) => {
@@ -12,19 +13,31 @@ export const createOrder = (req, res) => {
   preference
     .create({
       body: {
+        payment_methods: {
+          excluded_payment_methods: [
+            {
+              id: "visa",
+            },
+          ],
+          excluded_payment_types: [],
+          installments: 5,
+        },
         items: [
           {
             title: "Product",
             quantity: 1,
             unit_price: 1000,
+            picture_url: "https://www.mercadopago.com/org-img/MP3/home/logomp3.gif",
           },
         ],
         back_urls: {
-          success: `${HOST}/success`,
+          success: `${HOST}/success`, 
           failure: `${HOST}/failure`,
           pending: `${HOST}/pending`,
         },
+        auto_return: "approved",
         notification_url: "https://f63d-170-247-194-174.ngrok-free.app/webhook",
+        external_reference: "eduardxdc@gmail.com",
       },
     })
     .then((response) => {
