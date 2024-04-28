@@ -1,9 +1,9 @@
-import { MercadoPagoConfig, Preference } from "mercadopago";
+import { MercadoPagoConfig, Preference } from 'mercadopago';
+import { HOST, MERCADOPAGO_API_KEY } from '../config.js';
 import axios from "axios";
 
 const client = new MercadoPagoConfig({
-  accessToken:
-    "APP_USR-8693778713813598-042714-56aa663e3f7c0fc3778dc68b561df61c-1788151692",
+  accessToken: MERCADOPAGO_API_KEY,
 });
 
 export const createOrder = (req, res) => {
@@ -20,9 +20,9 @@ export const createOrder = (req, res) => {
           },
         ],
         back_urls: {
-          success: "http://localhost:3000/payment/success",
-          failure: "http://localhost:3000/payment/failure",
-          pending: "http://localhost:3000/payment/pending",
+          success: `${HOST}/success`,
+          failure: `${HOST}/failure`,
+          pending: `${HOST}/pending`,
         },
         notification_url: "https://f63d-170-247-194-174.ngrok-free.app/webhook",
       },

@@ -13,4 +13,4 @@ app.use(paymentRoutes);
 app.use(express.static(path.resolve('src/public')));
 
 app.listen(PORT);
-console.log('Server on port', 8080);
+console.log('Server on port', 3000);

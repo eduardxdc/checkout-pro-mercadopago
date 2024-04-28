@@ -1,4 +1,4 @@
-# Logs
+# logs;
 logs
 *.log
 npm-debug.log*
@@ -7,6 +7,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# dependencies and build folders;
 node_modules/
 dist
 dist-ssr
@@ -15,13 +16,14 @@ package-lock.json
 package.json/
 package.json
 .eslintrc.cjs
+.env
 
-# Arquivos de configuração TypeScript e Vite
+# misc;
 vite.config.ts
 tsconfig.json
 tsconfig.node.json
 
-# Editor directories and files
+# IDEs and editors;
 .vscode/*
 !.vscode/extensions.json
 .idea
