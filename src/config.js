@@ -6,3 +6,4 @@ export const PORT = 3000;
 export const HOST = `http://localhost:${PORT}`;
 
 export const MERCADOPAGO_API_KEY = process.env.MERCADOPAGO_API_KEY;
+export const INTEGRATOR_ID = process.env.INTEGRATOR_ID;

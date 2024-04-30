@@ -1,10 +1,10 @@
 import { MercadoPagoConfig, Preference } from 'mercadopago';
-import { HOST, MERCADOPAGO_API_KEY } from '../config.js';
+import { HOST, MERCADOPAGO_API_KEY, INTEGRATOR_ID } from '../config.js';
 import axios from "axios";
 
 const client = new MercadoPagoConfig({
   accessToken: MERCADOPAGO_API_KEY,
-  integrator_id: "dev_24c65fb163bf11ea96500242ac130004",
+  integrator_id: INTEGRATOR_ID,
 });
 
 export const createOrder = (req, res) => {
