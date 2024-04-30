@@ -24,6 +24,7 @@ tsconfig.json
 tsconfig.node.json
 
 # IDEs and editors;
+.ngrok.exe
 .vscode/*
 !.vscode/extensions.json
 .idea
